@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link
 
 const LoginCard = ({ username, setUsername, password, setPassword, handleLogin, error }) => {
   return (
@@ -29,6 +30,11 @@ const LoginCard = ({ username, setUsername, password, setPassword, handleLogin, 
         {error && <p style={{ color: 'red', fontSize: '0.9em', marginBottom: '10px' }}>{error}</p>}
         <button type="submit">Login</button>
       </form>
+
+      {/* Add this link here */}
+      <p style={{ marginTop: '15px', fontSize: '0.9rem', color: '#666' }}>
+        Don't have an account? <Link to="/register" style={{ color: '#007bff', textDecoration: 'none', fontWeight: 'bold' }}>Register</Link>
+      </p>
     </div>
   );
 };
