@@ -1,34 +1,23 @@
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import Login from './components/login';
+import Register from './components/register';
+import Home from './components/home';
 
-import React, { useState, useEffect } from 'react';
-import Login from './components/login'; 
-import Home from './components/home';  
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  useEffect(() => {
-    const token = localStorage.getItem('authToken');
-    if (token) {
-      setIsLoggedIn(true);
-    }
-  }, []);
-
-  const handleLoginSuccess = () => {
-    setIsLoggedIn(true);
-  };
-
-  const handleLogout = () => {
-    localStorage.removeItem('authToken');
-    setIsLoggedIn(false);
-  };
+  const isAuthenticated = !!localStorage.getItem('authToken');
 
   return (
-    <div className="App">
-      {isLoggedIn ? (
-        <Home onLogout={handleLogout} />
-      ) : (
-        <Login onLoginSuccess={handleLoginSuccess} />
-      )}
-    </div>
+    <Router basename="/TODO">
+      <Routes>
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={
+          isAuthenticated ? <Navigate to="/" /> : <Login onLoginSuccess={() => window.location.href='/TODO/'} />
+        } />
+        <Route path="/" element={
+          isAuthenticated ? <Home onLogout={() => { localStorage.removeItem('authToken'); window.location.reload(); }} /> : <Navigate to="/login" />
+        } />
+      </Routes>
+    </Router>
   );
 }
 
