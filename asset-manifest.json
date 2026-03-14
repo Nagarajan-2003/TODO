@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Nagarajan-2003/TODO/static/css/main.ab154b43.css",
+    "main.js": "/Nagarajan-2003/TODO/static/js/main.a17b9168.js",
+    "index.html": "/Nagarajan-2003/TODO/index.html",
+    "main.ab154b43.css.map": "/Nagarajan-2003/TODO/static/css/main.ab154b43.css.map",
+    "main.a17b9168.js.map": "/Nagarajan-2003/TODO/static/js/main.a17b9168.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ab154b43.css",
+    "static/js/main.a17b9168.js"
+  ]
+}
