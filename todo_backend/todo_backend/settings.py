@@ -107,10 +107,17 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 10 # Adjust as needed for your pagination
 }
 
-# CORS settings - crucial for frontend communication
+# settings.py
+
+# 1. Add your GitHub Pages URL to allowed origins
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "https://Nagarajan-2003.github.io", # Your GitHub Pages URL
+    "https://nagarajan-2003.github.io",
+    "http://localhost:3000",  # Keep this for local testing
+]
+
+# 2. Add it to trusted origins for CSRF (important for POST requests)
+CSRF_TRUSTED_ORIGINS = [
+    "https://nagarajan-2003.github.io",
 ]
 
 # Simple JWT settings
