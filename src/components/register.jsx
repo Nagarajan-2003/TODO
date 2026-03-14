@@ -46,8 +46,8 @@ const Register = () => {
           <button type="submit">Sign Up</button>
         </form>
         <p style={{ marginTop: '15px', fontSize: '0.9em' }}>
-          Already have an account? <span style={{ color: '#007bff', cursor: 'pointer' }} onClick={() => navigate('/login')}>Login</span>
-        </p>
+  Already have an account? <Link to="/login" style={{ color: '#007bff', fontWeight: 'bold' }}>Login here</Link>
+</p>
       </div>
     </div>
   );
