@@ -1,0 +1,90 @@
+
+.todo-app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.home-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 15px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.header-logo-txt {
+  font-size: 2.5rem;
+  color: #333;
+  margin: 0;
+}
+
+.new-task-btn {
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.new-task-btn:hover {
+  background-color: #0056b3;
+}
+
+.new-task-btn:active {
+  transform: scale(0.98);
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+.stat-card {
+  flex: 1;
+  padding: 15px;
+  border-radius: 8px;
+  background: #f5f5f5;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.stat-card:hover {
+  background: #e0e0e0;
+  transform: translateY(-2px);
+}
+
+.stat-card h3 {
+  margin: 0 0 5px 0;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.stat-card p {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.stat-card.active {
+  background: #4CAF50;
+  color: white;
+}
+
+.stat-card.active h3,
+.stat-card.active p {
+  color: white;
+}
